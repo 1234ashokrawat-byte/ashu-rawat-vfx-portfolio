@@ -71,4 +71,10 @@ function resize(){w=c.width=innerWidth;h=c.height=innerHeight;dots=Array.from({l
 function draw(){ctx.clearRect(0,0,w,h);dots.forEach(p=>{p.y-=p.v;if(p.y<0){p.y=h;p.x=Math.random()*w}ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(255,105,48,${p.a})`;ctx.fill()});requestAnimationFrame(draw)}
 addEventListener('resize',resize);resize();draw();
 </script>
-</body></html>
+<section style="padding:40px 20px;text-align:center;">
+    <h2>My Video Portfolio</h2>
+    <video controls playsinline preload="metadata"
+           style="width:100%;max-width:900px;border-radius:12px;">
+        <source src="Video%201%20(1)%20(1).mp4" type="video/mp4">
+    </video>
+</section> </body></html>
